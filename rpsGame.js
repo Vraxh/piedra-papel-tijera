@@ -1,6 +1,6 @@
 let  humanScore = 0,  computerScore = 0;
 
-function getComputerChoice() {
+function getComputerChoice(){
 
     let numRan = Math.random() * (4 - 1) + 1;
     let rps = "Rock_Paper_Scisors";
@@ -16,19 +16,22 @@ function getComputerChoice() {
 }
 
 function getHumanChoice(choice){
-
     let rps = "Rock_Paper_Scisors";
-    if(choice == 1){
+    let aux = choice.toUpperCase();
+
+    if(aux === "ROCK"){
         rps = "Rock";
-    }else if (choice == 2){
+    }else if (aux === "PAPER"){
         rps = "Paper";
-    }else if (choice == 3){
+    }else if (aux === "SCISORS"){
         rps = "Scisors";
     }
     return rps;
 }
 
+function playRound(humanChoice, computerChoice){
 
-result = window.prompt("1 - Rock | 2 - Paper | 3 - Scisors");
+}
+result = window.prompt("| 1 - Rock \n| 2 - Paper \n| 3 - Scisors");
 console.log(getHumanChoice(result));
 
